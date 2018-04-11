@@ -1,0 +1,11 @@
+<h1>Cats upon cats!</h1>
+<form class="" action=" <%= new_user_url %>" method="GET">
+  <input type="submit" value="Create new user">
+</form>
+<ul>
+  <% @cats.each do |cat| %>
+    <li><a href="<%= cat_url(cat) %>"><%= cat.name %></a></li>
+  <% end %>
+</ul>
+
+<a href="<%= new_cat_url %>">Create cat</a>
